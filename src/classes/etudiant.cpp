@@ -1,35 +1,56 @@
 #include <iostream>
+#include <string>
 #include "etudiant.h"
 
 using namespace std;
 
-etudiant::etudiant()
+Etudiant::Etudiant()
 {
-
+	m_nom = "Etudiant";
+	m_noteSur20=20;
+	m_noteSur10=10;
 }
 
-void etudiant::getEtudiant()
+Etudiant::Etudiant(string nom, int note20, int note10)
 {
-
+	m_nom = nom;
+	this->m_noteSur20 = note20;
+	this->m_noteSur10 = note10;
 }
 
-void etudiant::setEtudiant(string nom)
+string Etudiant::getEtudiant() const
+{
+	return m_nom;
+}
+
+void Etudiant::setEtudiant(string nom)
 {
 	m_nom = nom;
 }
 
-int etudiant::getNote1()
+int Etudiant::getNoteSur20() const
 {
-	return m_note1;
+	return m_noteSur20;
 }
 
-int etudiant::setNote1(int note)
+int Etudiant::setNoteSur20(int noteSur20)
 {
-	m_note1 = note;
-	return m_note1;
+	m_noteSur20 = noteSur20;
+	return m_noteSur20;
 }
 
-void etudiant::Moyenne()
+int Etudiant::getNoteSur10() const
+{
+	return m_noteSur10;
+}
+
+int Etudiant::setNoteSur10(int noteSur10)
+{
+	m_noteSur10 = noteSur10;
+	return m_noteSur10;
+}
+
+void Etudiant::Moyenne()
 {
 	float moyenne;	
 	cout << "votre moyenne est de " << moyenne << endl;
