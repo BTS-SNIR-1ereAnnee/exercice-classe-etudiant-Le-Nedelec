@@ -13,22 +13,24 @@ void etudiant::getEtudiant()
 
 }
 
-void etudiant::setEtudiant()
+void etudiant::setEtudiant(string nom)
 {
-
+	m_nom = nom;
 }
 
-int etudiant::getNote()
+int etudiant::getNote1()
 {
-	return m_note;
+	return m_note1;
 }
 
-int etudiant::setNote()
+int etudiant::setNote1(int note)
 {
-	return m_note;
+	m_note1 = note;
+	return m_note1;
 }
 
 void etudiant::Moyenne()
 {
-
+	float moyenne;	
+	cout << "votre moyenne est de " << moyenne << endl;
 }
