@@ -44,7 +44,7 @@ int Etudiant::getNoteSur10() const
 	return m_noteSur10;
 }
 
-int Etudiant::setNoteSur10(int noteSur10)
+int Etudiant::setNoteSur10(int note10)
 {
 	m_noteSur10 = noteSur10;
 	return m_noteSur10;
@@ -53,5 +53,7 @@ int Etudiant::setNoteSur10(int noteSur10)
 void Etudiant::Moyenne()
 {
 	float moyenne;	
-	cout << "votre moyenne est de " << moyenne << endl;
+	moyenne = m_noteSur20+(m_noteSur10*2);
+	moyenne = moyenne/2;
+	cout << "Votre moyenne est de : " << moyenne << endl;
 }
